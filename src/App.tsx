@@ -4,6 +4,7 @@ import routes from "tempo-routes";
 import Home from "./pages/Home";
 import CoursesPage from "./pages/CoursePage";
 import AboutUsPage from "./pages/AboutUsPage";
+import BlogPage from "./pages/BlogPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<CoursesPage />} />
           <Route path="/about" element={<AboutUsPage />} />
+          <Route path="/blog" element={<BlogPage />} />
         </Routes>
       </>
     </Suspense>
