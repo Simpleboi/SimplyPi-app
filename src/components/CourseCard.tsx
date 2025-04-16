@@ -9,8 +9,10 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon } from "lucide-react";
+import { useNavigate } from "react-router";
 
 interface CourseCardProps {
+  id: string;
   title: string;
   description: string;
   thumbnail: string;
@@ -22,6 +24,7 @@ interface CourseCardProps {
 }
 
 const CourseCard = ({
+  id = "1",
   title = "Introduction to Algebra",
   description = "Learn the fundamentals of algebra including equations, inequalities, and graphing functions.",
   thumbnail = "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&q=80",
@@ -29,12 +32,22 @@ const CourseCard = ({
   authorAvatarUrl,
   lastModified = "April 15, 2023",
   category = "Mathematics",
-  onClick = () => console.log("Course card clicked"),
+  onClick,
 }: CourseCardProps) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (onClick) {
+      onClick();
+    } else {
+      navigate(`/courses/${id}`);
+    }
+  };
+
   return (
     <Card
       className="overflow-hidden transition-all duration-300 hover:shadow-lg cursor-pointer bg-white h-full flex flex-col"
-      onClick={onClick}
+      onClick={handleClick}
     >
       <div className="relative h-48 overflow-hidden">
         <img

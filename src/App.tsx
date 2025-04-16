@@ -6,6 +6,7 @@ import CoursesPage from "./pages/CoursePage";
 import AboutUsPage from "./pages/AboutUsPage";
 import BlogPage from "./pages/BlogPage";
 import ContactUsPage from "./pages/ContactUs";
+import CourseDetailPage from "./components/CourseDetailsPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/contact" element={<ContactUsPage />} />
+          <Route path="/courses/:courseId" element={<CourseDetailPage />} />
         </Routes>
       </>
     </Suspense>
