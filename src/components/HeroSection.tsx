@@ -60,7 +60,7 @@ const HeroSection = ({
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
           <motion.h1
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-900 mb-6"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-900 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-800 to-green-600"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
