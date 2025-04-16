@@ -7,8 +7,8 @@ function Home() {
     <div className="w-full min-h-screen bg-white">
       <Navbar />
       <HeroSection
-        title="Making learning math and CS as Simple as Pi"
-        subtitle="A structured learning platform designed to help students master mathematics and computer science concepts through clear, engaging content."
+        title="SimplyPi"
+        subtitle="A structured learning platform designed to help students master mathematics and computer science concepts through clear, engaging content. Making Math and CS as Simple as Pi"
         ctaText="Start Learning Now"
         onCtaClick={() => console.log("CTA clicked")}
       />
