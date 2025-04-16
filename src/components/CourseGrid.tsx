@@ -96,11 +96,10 @@ const CourseGrid: React.FC<CourseGridProps> = ({
           {courses.map((course) => (
             <CourseCard
               key={course.id}
-              id={course.id}
               title={course.title}
               description={course.description}
               thumbnail={course.thumbnail}
-              author={course.author}
+              authorName={course.author}
               lastModified={course.lastModified}
             />
           ))}

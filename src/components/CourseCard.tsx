@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Card,
   CardContent,
@@ -14,7 +13,7 @@ import { CalendarIcon } from "lucide-react";
 interface CourseCardProps {
   title: string;
   description: string;
-  thumbnailUrl: string;
+  thumbnail: string;
   authorName: string;
   authorAvatarUrl?: string;
   lastModified: string;
@@ -25,7 +24,7 @@ interface CourseCardProps {
 const CourseCard = ({
   title = "Introduction to Algebra",
   description = "Learn the fundamentals of algebra including equations, inequalities, and graphing functions.",
-  thumbnailUrl = "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&q=80",
+  thumbnail = "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&q=80",
   authorName = "Nathaniel Paz",
   authorAvatarUrl,
   lastModified = "April 15, 2023",
@@ -39,7 +38,7 @@ const CourseCard = ({
     >
       <div className="relative h-48 overflow-hidden">
         <img
-          src={thumbnailUrl}
+          src={thumbnail}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
         />

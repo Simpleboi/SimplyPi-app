@@ -8,15 +8,26 @@ interface NavbarProps {
   links?: Array<{ label: string; href: string }>;
 }
 
-const Navbar = ({
-  logoSrc = "/logo.png",
-  links = [
-    { label: "Courses", href: "/courses" },
-    { label: "About", href: "/about" },
-    { label: "Blog", href: "/blog" },
-    { label: "Contact", href: "/contact" },
-  ],
-}: NavbarProps) => {
+// Navbar Logo
+export const NavBarLogo = () => {
+  return (
+    <div className="flex-shrink-0 flex items-center">
+      <Link to="/" className="flex items-center">
+        <h1>SimplyPi</h1>
+      </Link>
+    </div>
+  );
+};
+
+// Navigation Links
+export const links = [
+  { label: "Courses", href: "/courses" },
+  { label: "About Us", href: "/about" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact Us", href: "/contact" },
+];
+
+const Navbar = ({}: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -28,23 +39,7 @@ const Navbar = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="flex items-center">
-              <img
-                className="h-8 w-auto"
-                src={logoSrc}
-                alt="SimplyPi Logo"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src =
-                    "https://via.placeholder.com/120x40?text=SimplyPi";
-                }}
-              />
-              <span className="ml-2 text-xl font-bold text-blue-600">
-                SimplyPi
-              </span>
-            </Link>
-          </div>
+          <NavBarLogo />
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-6">
