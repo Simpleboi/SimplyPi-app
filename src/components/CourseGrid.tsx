@@ -1,6 +1,6 @@
 import React from "react";
 import CourseCard from "./CourseCard";
-import { courses } from "@/data/Course";
+import { COURSES } from "@/data/Course";
 
 interface Course {
   id: string;
@@ -33,7 +33,7 @@ const CourseGrid: React.FC<CourseGridProps> = ({
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-          {courses.map((course) => (
+          {COURSES.map((course) => (
             <CourseCard
               id={course.id}
               key={course.id}
