@@ -77,7 +77,7 @@ const Navbar = ({}: NavbarProps) => {
                 <Button variant="outline" size="sm" onClick={openLoginModal}>
                   Login
                 </Button>
-                <Button size="sm" onClick={openSignupModal}>
+                <Button size="sm" onClick={openSignupModal} className="text-white bg-gradient-to-r from-blue-800 to-green-600">
                   Sign Up
                 </Button>
               </div>
