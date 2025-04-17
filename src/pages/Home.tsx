@@ -1,6 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import CourseGrid from "@/components/CourseGrid";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
         title="Featured Courses"
         subtitle="Explore our most popular courses in mathematics and computer science"
       />
+      <Footer />
     </div>
   );
 }
